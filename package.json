@@ -1,0 +1,55 @@
+{
+  "name": "gooselaugh.com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "For a good laugh.",
+  "author": "",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "scripts": {
+    "prepublish": "bower install",
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1",
+    "gulp-rimraf": "^0.1.0"
+  },
+  "devDependencies": {
+    "bower": "~1.3.5",
+    "browserify": "~4.1.11",
+    "browserify-shim": "~3.6.0",
+    "coffeeify": "~0.6.0",
+    "connect-modrewrite": "^0.7.9",
+    "ecstatic": "~0.5.3",
+    "gulp": "~3.8.1",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-connect": "^2.0.6",
+    "gulp-jade": "~0.6.0",
+    "gulp-minify-css": "~0.3.5",
+    "gulp-plumber": "~0.6.3",
+    "gulp-rename": "~1.2.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-stylus": "1.0.2",
+    "gulp-uglify": "~0.1.0",
+    "gulp-usemin": "^0.3.8",
+    "gulp-util": "~2.2.17",
+    "karma": "~0.12.21",
+    "karma-chrome-launcher": "~0.1.4",
+    "karma-coffee-preprocessor": "~0.2.1",
+    "karma-jasmine": "~0.1.5",
+    "run-sequence": "^0.3.6",
+    "vinyl-source-stream": "~0.1.1",
+    "watchify": "~0.10.2",
+    "wiredep": "^1.8.5"
+  },
+  "browser": {},
+  "browserify-shim": {},
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "browserify-shim"
+    ]
+  }
+}

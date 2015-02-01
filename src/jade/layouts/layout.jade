@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Goooooooooooooooooseeeeeeeeeee
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='../../bower_components/normalize.css/normalize.css')
+    // endbower
+    // endbuild
+    link(href='http://vjs.zencdn.net/4.11/video-js.css', rel='stylesheet')        
+
+    // build:css styles/vendor.css
+    link(rel='stylesheet', href='styles/application.css')
+    // endbuild
+  body
+    block content
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../../bower_components/jquery/dist/jquery.js')
+    //- script(src='../../bower_components/particles.js/particles.js')
+    // endbower
+    // endbuild
+    script(src='http://vjs.zencdn.net/4.11/video.js')
+
+    // build:js scripts/application.js
+    script(src='scripts/main.js')
+    // endbuild

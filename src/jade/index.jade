@@ -1,0 +1,11 @@
+extends ./layouts/layout.jade
+
+block content
+  .header
+  .content-container
+    .video-container
+      img.poster-image.active(src='/images/landing.png')
+      video#main-video.video-js.vjs-default-skin(width='640', height='360')
+        source(src='/videos/laugh.mp4', type='video/mp4')
+        source(src='/videos/laugh.webm', type='video/webm')
+  .footer
