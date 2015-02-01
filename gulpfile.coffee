@@ -139,8 +139,8 @@ gulp.task 'build', ->
   else
     runSequence 'clean', 'bower', ['jade', 'stylus', 'coffee', 'assets']
 
-gulp.task "deploy", ->
-  gulp.src("./dist/**/*").pipe deploy(options)
+gulp.task 'deploy', ['build'], ->
+  gulp.src('./dist/**/*').pipe deploy()
 
 
 gulp.task 'default', ->
