@@ -20,6 +20,7 @@ runSequence = require 'run-sequence'
 rimraf      = require 'gulp-rimraf'
 connect     = require 'gulp-connect'
 modRewrite  = require 'connect-modrewrite'
+deploy      = require 'gulp-gh-pages'
 
 production = process.env.NODE_ENV is 'production'
 
@@ -137,6 +138,10 @@ gulp.task 'build', ->
     runSequence 'clean', 'bower', ['jade', 'stylus', 'coffee', 'assets'], 'usemin'
   else
     runSequence 'clean', 'bower', ['jade', 'stylus', 'coffee', 'assets']
+
+gulp.task "deploy", ->
+  gulp.src("./dist/**/*").pipe deploy(options)
+
 
 gulp.task 'default', ->
   runSequence 'build', ['connect', 'watch']
